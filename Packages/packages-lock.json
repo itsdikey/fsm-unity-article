@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.github.siccity.xnode": {
+      "version": "https://github.com/siccity/xNode.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "286b9a167a539efdedd6c3d131b049edd0019d41"
+    },
     "com.unity.cinemachine": {
       "version": "2.6.9",
       "depth": 0,
