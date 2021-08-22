@@ -24,6 +24,9 @@ namespace Demo.Enemy
 
             _ray = new Ray(this.transform.position, Player.position-this.transform.position);
 
+            if (Vector3.Dot(_ray.direction, this.transform.forward)<0)
+                return false;
+
             if (!Physics.Raycast(_ray, out var hit, 100, ~_ignoreMask))
             {
                 return false;
