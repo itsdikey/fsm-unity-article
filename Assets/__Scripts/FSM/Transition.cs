@@ -11,9 +11,9 @@ namespace Demo.FSM
 
         public void Execute(BaseStateMachine stateMachine)
         {
-            if(Decision.Decide(stateMachine))
+            if(Decision.Decide(stateMachine) && !(TrueState is RemainInState))
                 stateMachine.CurrentState = TrueState;
-            else
+            else if(!(FalseState is RemainInState))
                 stateMachine.CurrentState = FalseState;
         }
     }
