@@ -6,7 +6,7 @@ namespace Demo.Enemy
 {
     public class EnemySightSensor : MonoBehaviour
     {
-        private Transform _player;
+        public Transform Player { get; private set; }
 
         [SerializeField] private LayerMask _ignoreMask;
 
@@ -14,20 +14,15 @@ namespace Demo.Enemy
 
         private void Awake()
         {
-            _player = GameObject.Find("Player").transform;
+            Player = GameObject.Find("Player").transform;
         }
 
-        private void Update()
+        public bool Ping()
         {
-            Ping();
-        }
-
-        private bool Ping()
-        {
-            if (_player == null)
+            if (Player == null)
                 return false;
 
-            _ray = new Ray(this.transform.position, _player.position-this.transform.position);
+            _ray = new Ray(this.transform.position, Player.position-this.transform.position);
 
             if (!Physics.Raycast(_ray, out var hit, 100, ~_ignoreMask))
             {
