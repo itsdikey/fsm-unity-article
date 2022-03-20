@@ -18,6 +18,16 @@ namespace Demo.FSM
 
         private void Update()
         {
+            Execute();
+        }
+
+        public virtual void Init()
+        {
+            CurrentState = _initialState;
+        }
+
+        public virtual void Execute()
+        {
             CurrentState.Execute(this);
         }
 
