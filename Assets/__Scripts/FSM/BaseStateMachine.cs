@@ -10,7 +10,7 @@ namespace Demo.FSM
         private Dictionary<Type, Component> _cachedComponents;
         private void Awake()
         {
-            CurrentState = _initialState;
+            Init();
             _cachedComponents = new Dictionary<Type, Component>();
         }
 

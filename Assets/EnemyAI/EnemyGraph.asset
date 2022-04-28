@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Patrol
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -600, y: -72}
+  position: {x: -568, y: -216}
   ports:
     keys:
     - Transitions
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: Remain In State
   m_EditorClassIdentifier: 
   graph: {fileID: 0}
-  position: {x: -8, y: -40}
+  position: {x: -56, y: -40}
   ports:
     keys:
     - Entry
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: Chase
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -40, y: -264}
+  position: {x: -56, y: -200}
   ports:
     keys:
     - Transitions
@@ -164,7 +164,7 @@ MonoBehaviour:
     values:
     - _fieldName: TrueState
       _node: {fileID: 4950597573030128212}
-      _typeQualifiedName: Demo.FSM.Graph.StateNode, Assembly-CSharp, Version=0.0.0.0,
+      _typeQualifiedName: Demo.FSM.Graph.BaseStateNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Entry
@@ -176,7 +176,7 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: FalseState
       _node: {fileID: 4950597573030128212}
-      _typeQualifiedName: Demo.FSM.Graph.StateNode, Assembly-CSharp, Version=0.0.0.0,
+      _typeQualifiedName: Demo.FSM.Graph.BaseStateNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Entry
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: FSM Initial
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -632, y: -248}
+  position: {x: -760, y: -312}
   ports:
     keys:
     - InitialNode
